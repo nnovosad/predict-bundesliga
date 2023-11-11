@@ -37,6 +37,15 @@ for dirname, _, filenames in os.walk('/Users/nnovosad/PycharmProjects/pythonProj
 
 df = pd.concat((pd.read_csv(f) for f in tqdm(fnames)), ignore_index=True)
 
+# FTHG: Full Time Home Team Goals
+# HTHG: Half Time Home Team Goals
+# FTAG: Full Time Away Team Goals
+# HTAG: Half Time Away Team Goals
+# FTR: Full Time Result (being either "H", "A" or "D" for "Draw")
+# HTR: Half Time Result (being either "H", "A" or "D" for "Draw")
+# HomeTeam: Name of the home team
+# AwayTeam: Name of the away team
+
 print(df[["FTHG", "HTHG", "FTAG", "HTAG", "FTR", "HTR"]].describe())
 print(df[["FTHG", "HTHG", "FTAG", "HTAG", "FTR", "HTR"]].isnull().sum())
 
@@ -80,6 +89,94 @@ results_d3 = pd.DataFrame({
     "FTR": ['D', 'H', 'H', 'H', 'D', 'H', 'A', 'D', 'A'],
     "HTR": ['H', 'D', 'D', 'H', 'D', 'H', 'H', 'A', 'D'],
     "Date": ['01/09/23', '02/09/23', '02/09/23', '02/09/23', '02/09/23', '02/09/23', '02/09/23', '03/09/23', '03/09/23']
+})
+results_d4 = pd.DataFrame({
+    "HomeTeam": ['Bayern Munich', 'RB Leipzig', 'Mainz', 'FC Koln', 'Wolfsburg', 'Freiburg', 'Bochum', 'Heidenheim', 'Darmstadt'],
+    "AwayTeam": ['Leverkusen', 'Augsburg', 'Stuttgart', 'Hoffenheim', 'Union Berlin', 'Dortmund', 'Ein Frankfurt', 'Werder Bremen', "M'gladbach"],
+    "FTHG": [2, 3, 1, 1, 2, 2, 1, 4, 3],
+    "FTAG": [2, 0, 3, 3, 1, 4, 1, 2, 3],
+    "HTHG": [1, 3, 0, 0, 2, 2, 0, 2, 3],
+    "HTAG": [1, 0, 0, 2, 1, 1, 0, 0, 0],
+    "FTR": ['D', 'H', 'A', 'A', 'H', 'A', 'D', 'H', 'D'],
+    "HTR": ['D', 'H', 'D', 'A', 'H', 'H', 'D', 'H', 'H'],
+    "Date": ['15/09/23', '16/09/23', '16/09/23', '16/09/23', '16/09/23', '16/09/23', '16/09/23', '17/09/23', '17/09/23']
+})
+results_d5 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
+results_d6 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
+results_d7 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
+results_d8 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
+results_d9 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
+results_d10 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
+results_d11 = pd.DataFrame({
+    "HomeTeam": [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
 })
 
 df = pd.concat([df, results_d1, results_d2, results_d3], ignore_index=True)
