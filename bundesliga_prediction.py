@@ -135,37 +135,37 @@ results_d7 = pd.DataFrame({
     "Date": ['06/10/23', '07/10/23', '07/10/23', '07/10/23', '07/10/23', '07/10/23', '08/10/23', '08/10/23', '08/10/23']
 })
 results_d8 = pd.DataFrame({
-    "HomeTeam": [],
-    "AwayTeam": [],
-    "FTHG": [],
-    "FTAG": [],
-    "HTHG": [],
-    "HTAG": [],
-    "FTR": [],
-    "HTR": [],
-    "Date": []
+    "HomeTeam": ['Dortmund', 'Wolfsburg', 'Union Berlin', 'Hoffenheim', 'Darmstadt', 'Freiburg', 'Mainz', 'FC Koln', 'Heidenheim'],
+    "AwayTeam": ['Werder Bremen', 'Leverkusen', 'Stuttgart', 'Ein Frankfurt', 'RB Leipzig', 'Bochum', 'Bayern Munich', "M'gladbach", 'Augsburg'],
+    "FTHG": [1, 1, 0, 1, 1, 2, 1, 3, 2],
+    "FTAG": [0, 2, 3, 3, 3, 1, 3, 1, 5],
+    "HTHG": [0, 1, 0, 1, 1, 2, 1, 1, 2],
+    "HTAG": [0, 1, 1, 3, 2, 1, 2, 0, 3],
+    "FTR": ['H', 'A', 'A', 'A', 'A', 'H', 'A', 'H', 'A'],
+    "HTR": ['D', 'D', 'A', 'A', 'A', 'H', 'A', 'H', 'A'],
+    "Date": ['20/10/23', '21/10/23', '21/10/23', '21/10/23', '21/10/23', '21/10/23', '21/10/23', '22/10/23', '22/10/23']
 })
 results_d9 = pd.DataFrame({
-    "HomeTeam": [],
-    "AwayTeam": [],
-    "FTHG": [],
-    "FTAG": [],
-    "HTHG": [],
-    "HTAG": [],
-    "FTR": [],
-    "HTR": [],
-    "Date": []
+    "HomeTeam": ['Bochum', "M'gladbach", 'Bayern Munich', 'Augsburg', 'Stuttgart', 'Werder Bremen', 'RB Leipzig', 'Ein Frankfurt', 'Leverkusen'],
+    "AwayTeam": ['Mainz', 'Heidenheim', 'Darmstadt', 'Wolfsburg', 'Hoffenheim', 'Union Berlin', 'FC Koln', 'Dortmund', 'Freiburg'],
+    "FTHG": [2, 2, 8, 3, 2, 2, 6, 3, 2],
+    "FTAG": [2, 1, 0, 2, 3, 0, 0, 3, 1],
+    "HTHG": [1, 1, 0, 1, 0, 1, 4, 2, 1],
+    "HTAG": [0, 1, 0, 2, 2, 0, 0, 1, 0],
+    "FTR": ['D', 'H', 'H', 'H', 'A', 'H', 'H', 'D', 'H'],
+    "HTR": ['H', 'D', 'D', 'A', 'A', 'H', 'H', 'H', 'H'],
+    "Date": ['27/10/23', '28/10/23', '28/10/23', '28/10/23', '28/10/23', '28/10/23', '28/10/23', '29/10/23', '29/10/23']
 })
 results_d10 = pd.DataFrame({
-    "HomeTeam": [],
-    "AwayTeam": [],
-    "FTHG": [],
-    "FTAG": [],
-    "HTHG": [],
-    "HTAG": [],
-    "FTR": [],
-    "HTR": [],
-    "Date": []
+    "HomeTeam": ['Darmstadt', 'Hoffenheim', 'Mainz', 'Freiburg', 'Union Berlin', 'FC Koln', 'Dortmund', 'Wolfsburg', 'Heidenheim'],
+    "AwayTeam": ['Bochum', 'Leverkusen', 'RB Leipzig', "M'gladbach", 'Ein Frankfurt', 'Augsburg', 'Bayern Munich', 'Werder Bremen', 'Stuttgart'],
+    "FTHG": [1, 2, 2, 3, 0, 1, 0, 2, 2],
+    "FTAG": [2, 3, 0, 3, 3, 1, 4, 2, 0],
+    "HTHG": [1, 0, 0, 1, 0, 1, 0, 1, 0],
+    "HTAG": [1, 2, 0, 3, 2, 1, 2, 1, 0],
+    "FTR": ['A', 'A', 'H', 'D', 'A', 'D', 'A', 'D', 'H'],
+    "HTR": ['D', 'A', 'D', 'A', 'A', 'D', 'A', 'D', 'D'],
+    "Date": ['03/11/23', '04/11/23', '04/11/23', '04/11/23', '04/11/23', '04/11/23', '04/11/23', '05/11/23', '05/11/23']
 })
 results_d11 = pd.DataFrame({
     "HomeTeam": [],
