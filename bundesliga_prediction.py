@@ -168,15 +168,15 @@ results_d10 = pd.DataFrame({
     "Date": ['03/11/23', '04/11/23', '04/11/23', '04/11/23', '04/11/23', '04/11/23', '04/11/23', '05/11/23', '05/11/23']
 })
 results_d11 = pd.DataFrame({
-    "HomeTeam": [],
-    "AwayTeam": [],
-    "FTHG": [],
-    "FTAG": [],
-    "HTHG": [],
-    "HTAG": [],
-    "FTR": [],
-    "HTR": [],
-    "Date": []
+    "HomeTeam": ["M'gladbach", 'Augsburg', 'Stuttgart', 'Bayern Munich', 'Darmstadt', 'Bochum', 'Leverkusen', 'Werder Bremen', 'RB Leipzig'],
+    "AwayTeam": ['Wolfsburg', 'Hoffenheim', 'Dortmund', 'Heidenheim', 'Mainz', 'FC Koln', 'Union Berlin', 'Ein Frankfurt', 'Freiburg'],
+    "FTHG": [4, 1, 2, 4, 0, 1, 4, 2, 3],
+    "FTAG": [0, 1, 1, 2, 0, 1, 0, 2, 1],
+    "HTHG": [2, 0, 1, 2, 0, 1, 1, 1, 1,],
+    "HTAG": [0, 1, 1, 0, 0, 0, 0, 0, 1],
+    "FTR": ['H', 'D', 'H', 'H', 'D', 'D', 'H', 'D', 'H'],
+    "HTR": ['H', 'A', 'D', 'H', 'D', 'H', 'H', 'H', 'D'],
+    "Date": ['10/11/23', '11/11/23', '11/11/23', '11/11/23', '11/11/23', '11/11/23', '12/11/23', '12/11/23', '12/11/23']
 })
 
 df = pd.concat([df, results_d1, results_d2, results_d3], ignore_index=True)
