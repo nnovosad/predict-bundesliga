@@ -186,15 +186,37 @@ results_d11 = pd.DataFrame({
                  'Ein Frankfurt', 'Freiburg'],
     "FTHG": [4, 1, 2, 4, 0, 1, 4, 2, 3],
     "FTAG": [0, 1, 1, 2, 0, 1, 0, 2, 1],
-    "HTHG": [2, 0, 1, 2, 0, 1, 1, 1, 1, ],
+    "HTHG": [2, 0, 1, 2, 0, 1, 1, 1, 1],
     "HTAG": [0, 1, 1, 0, 0, 0, 0, 0, 1],
     "FTR": ['H', 'D', 'H', 'H', 'D', 'D', 'H', 'D', 'H'],
     "HTR": ['H', 'A', 'D', 'H', 'D', 'H', 'H', 'H', 'D'],
     "Date": ['10/11/23', '11/11/23', '11/11/23', '11/11/23', '11/11/23', '11/11/23', '12/11/23', '12/11/23', '12/11/23']
 })
+results_d12 = pd.DataFrame({
+    "HomeTeam": ['FC Koln', 'Werder Bremen', 'Freiburg', 'Wolfsburg', 'Dortmund', 'Union Berlin', 'Ein Frankfurt', 'Heidenheim', 'Hoffenheim'],
+    "AwayTeam": ['Bayern Munich', 'Leverkusen', 'Darmstadt', 'RB Leipzig', "M'gladbach", 'Augsburg', 'Stuttgart', 'Bochum', 'Mainz'],
+    "FTHG": [0, 0, 1, 2, 4, 1, 1, 0, 1],
+    "FTAG": [1, 3, 1, 1, 2, 1, 2, 0, 1],
+    "HTHG": [0, 0, 1, 1, 3, 0, 1, 0, 0],
+    "HTAG": [1, 2, 1, 0, 2, 1, 2, 0, 1],
+    "FTR": ['A', 'A', 'D', 'H', 'H', 'D', 'A', 'D', 'A'],
+    "HTR": ['A', 'A', 'D', 'H', 'H', 'A', 'A', 'D', 'D'],
+    "Date": ['24/11/23', '25/11/23', '25/11/23', '25/11/23', '25/11/23', '25/11/23', '25/11/23', '26/11/23', '26/11/23']
+})
+results_empty = pd.DataFrame({
+    "HomeTeam":  [],
+    "AwayTeam": [],
+    "FTHG": [],
+    "FTAG": [],
+    "HTHG": [],
+    "HTAG": [],
+    "FTR": [],
+    "HTR": [],
+    "Date": []
+})
 
 df = pd.concat([df, results_d1, results_d2, results_d3, results_d4, results_d5, results_d6, results_d7, results_d8,
-                results_d9, results_d10, results_d11], ignore_index=True)
+                results_d9, results_d10, results_d11, results_d12], ignore_index=True)
 
 match_days = {
     1: {
@@ -674,6 +696,46 @@ match_days = {
             9: {
                 "H": "Hoffenheim",
                 "A": "Mainz"
+            }
+        }
+    },
+    13: {
+        "matches": {
+            1: {
+                "H": "Darmstadt",
+                "A": "FC Koln"
+            },
+            2: {
+                "H": "Bayern Munich",
+                "A": "Union Berlin"
+            },
+            3: {
+                "H": "RB Leipzig",
+                "A": "Heidenheim"
+            },
+            4: {
+                "H": "M'gladbach",
+                "A": "Hoffenheim"
+            },
+            5: {
+                "H": "Bochum",
+                "A": "Wolfsburg",
+            },
+            6: {
+                "H": "Stuttgart",
+                "A": "Werder Bremen"
+            },
+            7: {
+                "H": "Mainz",
+                "A": "Freiburg"
+            },
+            8: {
+                "H": "Leverkusen",
+                "A": "Dortmund"
+            },
+            9: {
+                "H": "Augsburg",
+                "A": "Ein Frankfurt"
             }
         }
     },
