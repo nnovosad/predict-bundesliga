@@ -770,7 +770,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 sample_weights_train = df.loc[X_train.index, 'sample_weight'].values
 
-model = RandomForestRegressor(max_depth=5, n_estimators=500, random_state=41)
+model = RandomForestRegressor(n_estimators=1000, random_state=41)
 
 model.fit(X_train, y_train, sample_weight=sample_weights_train)
 
