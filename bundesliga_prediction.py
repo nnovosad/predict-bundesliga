@@ -194,6 +194,17 @@ def load_results_dataframes():
         "Date": ['24/11/23', '25/11/23', '25/11/23', '25/11/23', '25/11/23', '25/11/23', '25/11/23', '26/11/23',
                  '26/11/23']
     })
+    results_d13 = pd.DataFrame({
+        "HomeTeam": ['Darmstadt', 'RB Leipzig', "M'gladbach", 'Bochum', 'Stuttgart', 'Mainz', 'Leverkusen', 'Augsburg'],
+        "AwayTeam": ['FC Koln', 'Heidenheim', 'Hoffenheim', 'Wolfsburg', 'Werder Bremen', 'Freiburg', 'Dortmund', 'Ein Frankfurt'],
+        "FTHG": [0, 2, 2, 3, 2, 0, 1, 2],
+        "FTAG": [1, 1, 1, 1, 0, 1, 1, 1],
+        "HTHG": [0, 2, 0, 2, 1, 0, 0, 1],
+        "HTAG": [0, 1, 0, 1, 0, 0, 1, 0],
+        "FTR": ['A', 'H', 'H', 'H', 'H', 'A', 'D', 'H'],
+        "HTR": ['D', 'H', 'D', 'H', 'H', 'D', 'A', 'H'],
+        "Date": ['01/12/23', '02/12/23', '02/12/23', '02/12/23', '02/12/23', '03/12/23', '03/12/23', '03/12/23']
+    })
     results_empty = pd.DataFrame({
         "HomeTeam": [],
         "AwayTeam": [],
@@ -207,7 +218,7 @@ def load_results_dataframes():
     })
 
     return [results_d1, results_d2, results_d3, results_d4, results_d5, results_d6, results_d7, results_d8,
-            results_d9, results_d10, results_d11, results_d12]
+            results_d9, results_d10, results_d11, results_d12, results_d13]
 
 
 def preprocess_dataframe(df):
@@ -704,36 +715,72 @@ def create_match_days():
                     "A": "FC Koln"
                 },
                 2: {
-                    "H": "Bayern Munich",
-                    "A": "Union Berlin"
-                },
-                3: {
                     "H": "RB Leipzig",
                     "A": "Heidenheim"
                 },
-                4: {
+                3: {
                     "H": "M'gladbach",
                     "A": "Hoffenheim"
                 },
-                5: {
+                4: {
                     "H": "Bochum",
                     "A": "Wolfsburg",
                 },
-                6: {
+                5: {
                     "H": "Stuttgart",
                     "A": "Werder Bremen"
                 },
-                7: {
+                6: {
                     "H": "Mainz",
                     "A": "Freiburg"
                 },
-                8: {
+                7: {
                     "H": "Leverkusen",
                     "A": "Dortmund"
                 },
-                9: {
+                8: {
                     "H": "Augsburg",
                     "A": "Ein Frankfurt"
+                }
+            }
+        },
+        14: {
+            "matches": {
+                1: {
+                    "H": "Hoffenheim",
+                    "A": "Bochum"
+                },
+                2: {
+                    "H": "Union Berlin",
+                    "A": "M'gladbach"
+                },
+                3: {
+                    "H": "Ein Frankfurt",
+                    "A": "Bayern Munich"
+                },
+                4: {
+                    "H": "Wolfsburg",
+                    "A": "Freiburg"
+                },
+                5: {
+                    "H": "Werder Bremen",
+                    "A": "Augsburg",
+                },
+                6: {
+                    "H": "Heidenheim",
+                    "A": "Darmstadt"
+                },
+                7: {
+                    "H": "Dortmund",
+                    "A": "RB Leipzig"
+                },
+                8: {
+                    "H": "Stuttgart",
+                    "A": "Leverkusen"
+                },
+                9: {
+                    "H": "FC Koln",
+                    "A": "Mainz"
                 }
             }
         },
