@@ -205,6 +205,17 @@ def load_results_dataframes():
         "HTR": ['D', 'H', 'D', 'H', 'H', 'D', 'A', 'H'],
         "Date": ['01/12/23', '02/12/23', '02/12/23', '02/12/23', '02/12/23', '03/12/23', '03/12/23', '03/12/23']
     })
+    results_d14 = pd.DataFrame({
+        "HomeTeam": ['Hoffenheim', 'Wolfsburg', 'Heidenheim', 'Union Berlin', 'Werder Bremen', 'Ein Frankfurt', 'Dortmund', 'Stuttgart', 'FC Koln'],
+        "AwayTeam": ['Bochum', 'Freiburg', 'Darmstadt', "M'gladbach", 'Augsburg', 'Bayern Munich', 'RB Leipzig', 'Leverkusen', 'Mainz'],
+        "FTHG": [3, 0, 3, 3, 2, 5, 2, 1, 0],
+        "FTAG": [1, 1, 2, 1, 0, 1, 3, 1, 0],
+        "HTHG": [2, 0, 1, 1, 1, 3, 1, 1, 0],
+        "HTAG": [0, 0, 0, 0, 0, 1, 1, 0, 0],
+        "FTR": ['H', 'A', 'H', 'H', 'H', 'H', 'A', 'D', 'D'],
+        "HTR": ['H', 'D', 'H', 'H', 'H', 'H', 'D', 'H', 'D'],
+        "Date": ['08/12/23', '09/12/23', '09/12/23', '09/12/23', '09/12/23', '09/12/23', '09/12/23', '10/12/23', '10/12/23']
+    })
     results_empty = pd.DataFrame({
         "HomeTeam": [],
         "AwayTeam": [],
@@ -218,7 +229,7 @@ def load_results_dataframes():
     })
 
     return [results_d1, results_d2, results_d3, results_d4, results_d5, results_d6, results_d7, results_d8,
-            results_d9, results_d10, results_d11, results_d12, results_d13]
+            results_d9, results_d10, results_d11, results_d12, results_d13, results_d14]
 
 
 def preprocess_dataframe(df):
@@ -781,6 +792,46 @@ def create_match_days():
                 9: {
                     "H": "FC Koln",
                     "A": "Mainz"
+                }
+            }
+        },
+        15: {
+            "matches": {
+                1: {
+                    "H": "M'gladbach",
+                    "A": "Werder Bremen"
+                },
+                2: {
+                    "H": "Mainz",
+                    "A": "Heidenheim"
+                },
+                3: {
+                    "H": "Bochum",
+                    "A": "Union Berlin"
+                },
+                4: {
+                    "H": "Augsburg",
+                    "A": "Dortmund"
+                },
+                5: {
+                    "H": "Darmstadt",
+                    "A": "Wolfsburg",
+                },
+                6: {
+                    "H": "RB Leipzig",
+                    "A": "Hoffenheim"
+                },
+                7: {
+                    "H": "Freiburg",
+                    "A": "FC Koln"
+                },
+                8: {
+                    "H": "Leverkusen",
+                    "A": "Ein Frankfurt"
+                },
+                9: {
+                    "H": "Bayern Munich",
+                    "A": "Stuttgart"
                 }
             }
         },
