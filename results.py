@@ -211,6 +211,19 @@ results_d15 = pd.DataFrame({
     "HTR": ['D', 'A', 'H', 'D', 'D', 'D', 'D', 'H', 'H'],
     "Date": ['15/12/23', '16/12/23', '16/12/23', '16/12/23', '16/12/23', '16/12/23', '17/12/23', '17/12/23', '17/12/23']
 })
+results_d16 = pd.DataFrame({
+    "HomeTeam": ['Werder Bremen', 'Dortmund', 'Hoffenheim', 'Union Berlin', 'Leverkusen', 'Stuttgart', 'Wolfsburg',
+                 'Heidenheim', 'Heidenheim'],
+    "AwayTeam": ['RB Leipzig', 'Mainz', 'Darmstadt', 'FC Koln', 'Bochum', 'Augsburg', 'Bayern Munich', 'Freiburg',
+                 "M'gladbach"],
+    "FTHG": [1, 1, 3, 2, 4, 3, 1, 3, 2],
+    "FTAG": [1, 1, 3, 0, 0, 0, 2, 2, 1],
+    "HTHG": [0, 1, 2, 0, 3, 2, 1, 0, 0],
+    "HTAG": [0, 1, 1, 0, 0, 0, 2, 1, 1],
+    "FTR": ['D', 'D', 'D', 'H', 'H', 'H', 'A', 'H', 'H'],
+    "HTR": ['D', 'D', 'H', 'D', 'H', 'H', 'A', 'A', 'A'],
+    "Date": ['19/12/23', '19/12/23', '19/12/23', '20/12/23', '20/12/23', '20/12/23', '20/12/23', '20/12/23', '20/12/23']
+})
 results_empty = pd.DataFrame({
     "HomeTeam": [],
     "AwayTeam": [],
