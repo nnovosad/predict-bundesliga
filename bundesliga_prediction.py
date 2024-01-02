@@ -76,6 +76,8 @@ def main():
     results_dataframes = load_results_dataframes()
     df = pd.concat([df] + results_dataframes, ignore_index=True)
 
+    df['FTR'] = df['FTR'].replace({'A': -1, 'D': 0, 'H': 1})
+
     df = preprocess_dataframe(df)
 
     match_days = md.match_days
@@ -102,7 +104,7 @@ def main():
     df['AwayTeam'] = label_encoders['AwayTeam'].fit_transform(df['AwayTeam'])
 
     X = df[['HomeTeam', 'AwayTeam']]
-    y = df[['FTHG', "FTAG"]]
+    y = df['FTR']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -116,16 +118,20 @@ def main():
     print("Mean Absolute Error:", mean_absolute_error(y_test, y_pred))
     print("R^2 Score:", r2_score(y_test, y_pred))
 
-    for n in match_days:
-        match_day = match_days[n]["matches"]
-        print('Match day number: {}'.format(n))
-        for i in match_day:
-            match = match_day[i]
-            H = match["H"]
-            A = match["A"]
-            if H and A:
-                r = predict_result(H, A, label_encoders, model)
-                print(f"{H}: {round(r[0])} - {round(r[1])} : {A}")
+    results_mapping = {-1: 'Away', 0: 'Draw', 1: 'Home'}
+
+    last_match_day = list(match_days.keys())[-1]
+    last_match_day_info = match_days[last_match_day]["matches"]
+
+    print('Match day number: {}'.format(last_match_day))
+    for i in last_match_day_info:
+        match = last_match_day_info[i]
+        H = match["H"]
+        A = match["A"]
+        if H and A:
+            r = predict_result(H, A, label_encoders, model)
+            result_string = results_mapping.get(round(r))
+            print(f"{H} vs {A}: {result_string}")
 
 
 if __name__ == "__main__":
