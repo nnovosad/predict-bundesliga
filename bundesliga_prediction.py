@@ -84,9 +84,6 @@ def main():
     df = df.sample(frac=1)
     df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
 
-    print(np.sort(df["AwayTeam"].unique()))
-    print(np.sort(df["HomeTeam"].unique()))
-
     max_date = df['Date'].max()
     df['days_since_last_match'] = (max_date - df['Date']).dt.days
 
@@ -116,16 +113,17 @@ def main():
     print("Mean Absolute Error:", mean_absolute_error(y_test, y_pred))
     print("R^2 Score:", r2_score(y_test, y_pred))
 
-    for n in match_days:
-        match_day = match_days[n]["matches"]
-        print('Match day number: {}'.format(n))
-        for i in match_day:
-            match = match_day[i]
-            H = match["H"]
-            A = match["A"]
-            if H and A:
-                r = predict_result(H, A, label_encoders, model)
-                print(f"{H}: {round(r[0])} - {round(r[1])} : {A}")
+    last_match_day = list(match_days.keys())[-1]
+    last_match_day_info = match_days[last_match_day]["matches"]
+
+    print('Match day number: {}'.format(last_match_day))
+    for i in last_match_day_info:
+        match = last_match_day_info[i]
+        H = match["H"]
+        A = match["A"]
+        if H and A:
+            r = predict_result(H, A, label_encoders, model)
+            print(f"{H}: {round(r[0])} - {round(r[1])} : {A}")
 
 
 if __name__ == "__main__":
