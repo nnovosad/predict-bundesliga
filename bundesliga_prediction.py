@@ -10,6 +10,7 @@ from tqdm import tqdm
 import results as rs
 import match_days as md
 
+from random import randrange
 
 def read_and_concat_files(directory):
     fnames = []
@@ -123,7 +124,10 @@ def main():
         A = match["A"]
         if H and A:
             r = predict_result(H, A, label_encoders, model)
-            print(f"{H}: {round(r[0])} - {round(r[1])} : {A}")
+            print(f"{i}. {H}: {round(r[0])} - {round(r[1])} : {A}")
+
+    random_match = randrange(1, 9)
+    print("Random match %s" % random_match)
 
 
 if __name__ == "__main__":
