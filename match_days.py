@@ -795,4 +795,48 @@ match_days = {
             }
         }
     },
+    21: {
+        "matches": {
+            1: {
+                "H": "Dortmund",
+                "A": "Freiburg"
+            },
+            2: {
+                "H": "Union Berlin",
+                "A": "Wolfsburg"
+            },
+            3: {
+                "H": "Ein Frankfurt",
+                "A": "Bochum"
+            },
+            4: {
+                "H": "M'gladbach",
+                "A": "Darmstadt"
+            },
+            5: {
+                "H": "Werder Bremen",
+                "A": "Heidenheim",
+            },
+            6: {
+                "H": "Augsburg",
+                "A": "RB Leipzig"
+            },
+            7: {
+                "H": "Bayern Munich",
+                "A": "Leverkusen"
+            },
+            8: {
+                "H": "Stuttgart",
+                "A": "Mainz"
+            },
+            9: {
+                "H": "Hoffenheim",
+                "A": "FC Koln"
+            },
+            10: {
+                "H": "Mainz",
+                "A": "Union Berlin"
+            }
+        }
+    },
 }
