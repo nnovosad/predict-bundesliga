@@ -26,8 +26,9 @@ def read_and_concat_files(directory):
 
 def load_results_dataframes():
     return [rs.results_d1, rs.results_d2, rs.results_d3, rs.results_d4, rs.results_d5, rs.results_d6, rs.results_d7,
-            rs.results_d8, rs.results_d9, rs.results_d10, rs.results_d11, rs.results_d12, rs.results_d13, rs.results_d14,
-            rs.results_d15, rs.results_d16, rs.results_d17, rs. results_d18, rs.results_d19, rs.results_d20]
+            rs.results_d8, rs.results_d9, rs.results_d10, rs.results_d11, rs.results_d12, rs.results_d13,
+            rs.results_d14, rs.results_d15, rs.results_d16, rs.results_d17, rs. results_d18, rs.results_d19,
+            rs.results_d20, rs.results_d21]
 
 
 def preprocess_dataframe(df):

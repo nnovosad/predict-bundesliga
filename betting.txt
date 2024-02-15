@@ -47,13 +47,25 @@ day #20
 Total: 5 from 9
 
 day #21
-1. Dortmund: 4 - 1 : Freiburg
-2. Union Berlin: 2 - 1 : Wolfsburg
-3. Ein Frankfurt: 2 - 1 : Bochum
-4. M'gladbach: 3 - 2 : Darmstadt
-5. Werder Bremen: 2 - 1 : Heidenheim
-6. Augsburg: 1 - 1 : RB Leipzig
-7. Bayern Munich: 2 - 2 : Leverkusen
-8. Stuttgart: 2 - 1 : Mainz
-9. Hoffenheim: 4 - 0 : FC Koln
-10. Mainz: 1 - 2 : Union Berlin
+1. Dortmund: 4 - 1 : Freiburg = win
+2. Union Berlin: 2 - 1 : Wolfsburg = win
+3. Ein Frankfurt: 2 - 1 : Bochum = lost
+4. M'gladbach: 3 - 2 : Darmstadt = lost
+5. Werder Bremen: 2 - 1 : Heidenheim = lost
+6. Augsburg: 1 - 1 : RB Leipzig = win
+7. Bayern Munich: 2 - 2 : Leverkusen = lost
+8. Stuttgart: 2 - 1 : Mainz = win
+9. Hoffenheim: 4 - 0 : FC Koln = lost
+10. Mainz: 1 - 2 : Union Berlin = lost
+Total: 4 from 10
+
+day #22
+1. FC Koln: 1 - 0 : Werder Bremen
+2. Hoffenheim: 2 - 2 : Union Berlin
+3. Heidenheim: 1 - 2 : Leverkusen
+4. Darmstadt: 1 - 2 : Stuttgart
+5. Wolfsburg: 0 - 2 : Dortmund
+6. Mainz: 0 - 1 : Augsburg
+7. RB Leipzig: 4 - 1 : M'gladbach
+8. Freiburg: 1 - 2 : Ein Frankfurt
+9. Bochum: 1 - 3 : Bayern Munich
