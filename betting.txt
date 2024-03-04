@@ -84,12 +84,24 @@ day #23
 Total: 2 from 10
 
 day #24
-1. Freiburg: 1 - 3 : Bayern Munich
-2. Union Berlin: 1 - 2 : Dortmund
-3. Mainz: 1 - 1 : M'gladbach
-4. Bochum: 0 - 1 : RB Leipzig
-5. Heidenheim: 1 - 1 : Ein Frankfurt
-6. Darmstadt: 2 - 2 : Augsburg
-7. Wolfsburg: 1 - 1 : Stuttgart
-8. FC Koln: 1 - 3 : Leverkusen
-9. Hoffenheim: 3 - 1 : Werder Bremen
+1. Freiburg: 1 - 3 : Bayern Munich = lost
+2. Union Berlin: 1 - 2 : Dortmund = win
+3. Mainz: 1 - 1 : M'gladbach = win
+4. Bochum: 0 - 1 : RB Leipzig = win
+5. Heidenheim: 1 - 1 : Ein Frankfurt = lost
+6. Darmstadt: 2 - 2 : Augsburg = lost
+7. Wolfsburg: 1 - 1 : Stuttgart = lost
+8. FC Koln: 1 - 3 : Leverkusen = win
+9. Hoffenheim: 3 - 1 : Werder Bremen = win
+Total: 5 from 10
+
+day #25
+1. Stuttgart: 1 - 1 : Union Berlin
+2. M'gladbach: 1 - 2 : FC Koln
+3. Augsburg: 0 - 2 : Heidenheim
+4. Bayern Munich: 3 - 1 : Mainz
+5. RB Leipzig: 3 - 1 : Darmstadt
+6. Werder Bremen: 1 - 2 : Dortmund
+7. Bochum: 2 - 1 : Freiburg
+8. Ein Frankfurt: 2 - 1 : Hoffenheim
+9. Leverkusen: 0 - 2 : Wolfsburg
