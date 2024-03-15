@@ -304,7 +304,7 @@ results_d23 = pd.DataFrame({
 
 results_d24 = pd.DataFrame({
     "HomeTeam": ['Freiburg', 'Heidenheim', 'Mainz', 'Bochum', 'Darmstadt', 'Union Berlin', 'Wolfsburg', 'FC Koln', 'Hoffenheim'],
-    "AwayTeam": ['Bayern Munich', 'Ein Frankfurt', "M'gladbach", 'RB Leipzig', 'Augsburg', 'Dortmund', 'Stuttgart', 'Bayern Munich', 'Werder Bremen'],
+    "AwayTeam": ['Bayern Munich', 'Ein Frankfurt', "M'gladbach", 'RB Leipzig', 'Augsburg', 'Dortmund', 'Stuttgart', 'Leverkusen', 'Werder Bremen'],
     "FTHG": [2, 1, 1, 1, 0, 0, 2, 0, 2],
     "FTAG": [2, 2, 1, 4, 6, 2, 3, 2, 1],
     "HTHG": [1, 0, 1, 1, 0, 0, 0, 0, 2],
@@ -312,6 +312,18 @@ results_d24 = pd.DataFrame({
     "FTR": ['D', 'A', 'D', 'A', 'A', 'A', 'A', 'A', 'H'],
     "HTR": ['D', 'A', 'H', 'D', 'A', 'A', 'A', 'A', 'H'],
     "Date": ['01/03/24', '02/03/24', '02/03/24', '02/03/24', '02/03/24', '02/03/24', '02/03/24', '03/03/24', '03/03/24',]
+})
+
+results_d25 = pd.DataFrame({
+    "HomeTeam": ['Stuttgart', "M'gladbach", 'Augsburg', 'RB Leipzig', 'Bayern Munich', 'Werder Bremen', 'Bochum', 'Ein Frankfurt', 'Leverkusen'],
+    "AwayTeam": ['Union Berlin', 'FC Koln', 'Heidenheim', 'Darmstadt', 'Mainz', 'Dortmund', 'Freiburg', 'Hoffenheim', 'Wolfsburg'],
+    "FTHG": [2, 3, 1, 2, 8, 1, 1, 3, 2],
+    "FTAG": [0, 3, 0, 0, 1, 2, 2, 1, 0],
+    "HTHG": [1, 1, 1, 1, 3, 0, 0, 1, 1],
+    "HTAG": [0, 1, 0, 0, 1, 2, 1, 1, 0],
+    "FTR": ['H', 'D', 'H', 'H', 'H', 'A', 'A', 'H', 'H'],
+    "HTR": ['H', 'D', 'H', 'H', 'H', 'A', 'A', 'A', 'H'],
+    "Date": ['08/03/24', '09/03/24', '09/03/24', '09/03/24', '09/03/24', '09/03/24', '10/03/24', '10/03/24', '10/03/24']
 })
 
 results_empty = pd.DataFrame({
