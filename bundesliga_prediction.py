@@ -29,7 +29,7 @@ def load_results_dataframes():
             rs.results_d8, rs.results_d9, rs.results_d10, rs.results_d11, rs.results_d12, rs.results_d13,
             rs.results_d14, rs.results_d15, rs.results_d16, rs.results_d17, rs. results_d18, rs.results_d19,
             rs.results_d20, rs.results_d21, rs.results_d22, rs.results_d23, rs.results_d24, rs.results_d25,
-            rs.results_d26]
+            rs.results_d26, rs.results_d27, rs.results_d28, rs.results_d29]
 
 
 def preprocess_dataframe(df):

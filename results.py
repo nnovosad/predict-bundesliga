@@ -338,6 +338,42 @@ results_d26 = pd.DataFrame({
     "Date": ['15/03/24', '16/03/24', '16/03/24', '16/03/24', '16/03/24', '16/03/24', '16/03/24', '17/03/24', '17/03/24']
 })
 
+results_d27 = pd.DataFrame({
+    "HomeTeam": ["M'gladbach", 'Leverkusen', 'Werder Bremen', 'RB Leipzig', 'Ein Frankfurt', 'Bayern Munich', 'Augsburg', 'Stuttgart', 'Bochum'],
+    "AwayTeam": ['Freiburg', 'Hoffenheim', 'Wolfsburg', 'Mainz', 'Union Berlin', 'Dortmund', 'FC Koln', 'Heidenheim', 'Darmstadt'],
+    "FTHG": [0, 2, 0, 0, 0, 0, 1, 3, 2],
+    "FTAG": [3, 1, 2, 0, 0, 2, 1, 3, 2],
+    "HTHG": [0, 0, 0, 0, 0, 0, 1, 1, 1],
+    "HTAG": [1, 1, 1, 0, 0, 1, 1, 0, 0],
+    "FTR": ['A', 'H', 'A', 'D', 'D', 'A', 'D', 'D', 'D'],
+    "HTR": ['A', 'A', 'A', 'D', 'D', 'A', 'D', 'H', 'H'],
+    "Date": ['30/03/24', '30/03/24', '30/03/24', '30/03/24', '30/03/24', '30/03/24', '31/03/24', '31/03/24', '31/03/24']
+})
+
+results_d28 = pd.DataFrame({
+    "HomeTeam": ['Ein Frankfurt', 'Freiburg', 'Union Berlin', 'FC Koln', 'Heidenheim', 'Mainz', 'Dortmund', 'Hoffenheim', 'Wolfsburg'],
+    "AwayTeam": ['Werder Bremen', 'RB Leipzig', 'Leverkusen', 'Bochum', 'Bayern Munich', 'Darmstadt', 'Stuttgart', 'Augsburg', "M'gladbach"],
+    "FTHG": [1, 1, 0, 2, 3, 4, 0, 3, 1],
+    "FTAG": [1, 4, 1, 1, 2, 0, 1, 1, 3],
+    "HTHG": [0, 0, 0, 0, 0, 1, 0, 2, 1],
+    "HTAG": [0, 3, 1, 0, 2, 0, 0, 0, 0],
+    "FTR": ['D', 'A', 'A', 'H', 'H', 'H', 'A', 'H', 'A'],
+    "HTR": ['D', 'A', 'A', 'D', 'A', 'H', 'D', 'H', 'H'],
+    "Date": ['05/04/24', '06/04/24', '06/04/24', '06/04/24', '06/04/24', '06/04/24', '06/04/24', '07/04/24', '07/04/24']
+})
+
+results_d29 = pd.DataFrame({
+    "HomeTeam": ['Augsburg', 'Mainz', 'RB Leipzig', 'Bayern Munich', 'Bochum', "M'gladbach", 'Stuttgart', 'Darmstadt', 'Leverkusen'],
+    "AwayTeam": ['Union Berlin', 'Hoffenheim', 'Wolfsburg', 'FC Koln', 'Heidenheim', 'Dortmund', 'Ein Frankfurt', 'Freiburg', 'Werder Bremen'],
+    "FTHG": [2, 4, 3, 2, 1, 1, 3, 0, 5],
+    "FTAG": [0, 1, 0, 0, 1, 2, 0, 1, 0],
+    "HTHG": [0, 0, 1, 0, 0, 1, 3, 0, 1],
+    "HTAG": [0, 1, 0, 0, 0, 2, 0, 1, 0],
+    "FTR": ['H', 'H', 'H', 'H', 'D', 'A', 'H', 'A', 'H'],
+    "HTR": ['D', 'A', 'H', 'D', 'D', 'A', 'H', 'A', 'H'],
+    "Date": ['12/04/24', '13/04/24', '13/04/24', '13/04/24', '13/04/24', '13/04/24', '13/04/24', '14/04/24', '14/04/24']
+})
+
 results_empty = pd.DataFrame({
     "HomeTeam": [],
     "AwayTeam": [],
