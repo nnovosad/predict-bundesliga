@@ -188,3 +188,14 @@ day #32
 7. Union Berlin: 3 - 1 : Bochum
 8. Ein Frankfurt: 2 - 0 : Leverkusen
 9. Heidenheim: 1 - 0 : Mainz
+
+day #33
+1. Augsburg: 4 - 1 : Stuttgart
+2. RB Leipzig: 2 - 0 : Werder Bremen
+3. Freiburg: 3 - 0 : Heidenheim
+4. M'gladbach: 3 - 2 : Ein Frankfurt
+5. FC Koln: 2 - 2 : Union Berlin
+6. Mainz: 0 - 2 : Dortmund
+7. Darmstadt: 1 - 2 : Hoffenheim
+8. Bayern Munich: 2 - 1 : Wolfsburg
+9. Bochum: 0 - 1 : Leverkusen
