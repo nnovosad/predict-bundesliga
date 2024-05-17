@@ -177,25 +177,38 @@ day #31
 7. M'gladbach: 2 - 2 : Union Berlin = win
 8. Mainz: 1 - 1 : FC Koln = win
 9. Darmstadt: 1 - 2 : Heidenheim = win
+Total: 4 from 9
 
 day #32
-1. Hoffenheim: 2 - 1 : RB Leipzig
-2. Dortmund: 3 - 1 : Augsburg
-3. Wolfsburg: 1 - 1 : Darmstadt
-4. Werder Bremen: 2 - 3 : M'gladbach
-5. Stuttgart: 0 - 4 : Bayern Munich
-6. FC Koln: 2 - 0 : Freiburg
-7. Union Berlin: 3 - 1 : Bochum
-8. Ein Frankfurt: 2 - 0 : Leverkusen
-9. Heidenheim: 1 - 0 : Mainz
+1. Hoffenheim: 2 - 1 : RB Leipzig = lost
+2. Dortmund: 3 - 1 : Augsburg = win
+3. Wolfsburg: 1 - 1 : Darmstadt = lost
+4. Werder Bremen: 2 - 3 : M'gladbach = lost
+5. Stuttgart: 0 - 4 : Bayern Munich = lost
+6. FC Koln: 2 - 0 : Freiburg = lost
+7. Union Berlin: 3 - 1 : Bochum = lost
+8. Ein Frankfurt: 2 - 0 : Leverkusen = lost
+9. Heidenheim: 1 - 0 : Mainz = lost
+Total: 0 from 9
 
 day #33
-1. Augsburg: 4 - 1 : Stuttgart
-2. RB Leipzig: 2 - 0 : Werder Bremen
-3. Freiburg: 3 - 0 : Heidenheim
-4. M'gladbach: 3 - 2 : Ein Frankfurt
-5. FC Koln: 2 - 2 : Union Berlin
-6. Mainz: 0 - 2 : Dortmund
-7. Darmstadt: 1 - 2 : Hoffenheim
-8. Bayern Munich: 2 - 1 : Wolfsburg
-9. Bochum: 0 - 1 : Leverkusen
+1. Augsburg: 4 - 1 : Stuttgart = lost
+2. RB Leipzig: 2 - 0 : Werder Bremen = lost
+3. Freiburg: 3 - 0 : Heidenheim = lost
+4. M'gladbach: 3 - 2 : Ein Frankfurt = lost
+5. FC Koln: 2 - 2 : Union Berlin = lost
+6. Mainz: 0 - 2 : Dortmund = lost
+7. Darmstadt: 1 - 2 : Hoffenheim = win
+8. Bayern Munich: 2 - 1 : Wolfsburg = win
+9. Bochum: 0 - 1 : Leverkusen = win
+
+day #34
+1. Dortmund: 2 - 1 : Darmstadt
+2. Union Berlin: 1 - 1 : Freiburg
+3. Leverkusen: 2 - 1 : Augsburg
+4. Werder Bremen: 1 - 1 : Bochum
+5. Stuttgart: 2 - 1 : M'gladbach
+6. Heidenheim: 1 - 1 : FC Koln
+7. Ein Frankfurt: 1 - 1 : RB Leipzig
+8. Wolfsburg: 4 - 1 : Mainz
+9. Hoffenheim: 2 - 1 : Bayern Munich
