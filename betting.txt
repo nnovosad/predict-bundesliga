@@ -201,14 +201,16 @@ day #33
 7. Darmstadt: 1 - 2 : Hoffenheim = win
 8. Bayern Munich: 2 - 1 : Wolfsburg = win
 9. Bochum: 0 - 1 : Leverkusen = win
+Total: 3 from 9
 
 day #34
-1. Dortmund: 2 - 1 : Darmstadt
-2. Union Berlin: 1 - 1 : Freiburg
-3. Leverkusen: 2 - 1 : Augsburg
-4. Werder Bremen: 1 - 1 : Bochum
-5. Stuttgart: 2 - 1 : M'gladbach
-6. Heidenheim: 1 - 1 : FC Koln
-7. Ein Frankfurt: 1 - 1 : RB Leipzig
-8. Wolfsburg: 4 - 1 : Mainz
-9. Hoffenheim: 2 - 1 : Bayern Munich
+1. Dortmund: 2 - 1 : Darmstadt = win
+2. Union Berlin: 1 - 1 : Freiburg = lost
+3. Leverkusen: 2 - 1 : Augsburg = win
+4. Werder Bremen: 1 - 1 : Bochum = lost
+5. Stuttgart: 2 - 1 : M'gladbach = win
+6. Heidenheim: 1 - 1 : FC Koln = lost
+7. Ein Frankfurt: 1 - 1 : RB Leipzig = win
+8. Wolfsburg: 4 - 1 : Mainz = lost
+9. Hoffenheim: 2 - 1 : Bayern Munich = win
+Total: 5 from 9
