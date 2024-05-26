@@ -1,11 +1,13 @@
-from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, Lasso
 
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
 from sklearn.preprocessing import LabelEncoder, PolynomialFeatures
-
+from xgboost import XGBRegressor
+from lightgbm import LGBMRegressor
+from catboost import CatBoostRegressor
 
 def main():
     matches = pd.read_csv('/Users/nnovosad/PycharmProjects/predict-bundesliga/kaggle/euro-championship/Uefa_Euro_Cup_All_Matches.csv')
@@ -33,6 +35,9 @@ def main():
 
     # model = RandomForestRegressor(random_state=41, max_depth=5, min_samples_leaf=1, min_samples_split=5, n_estimators=1500)
     model = LinearRegression(copy_X=True, fit_intercept=True, positive=True)
+    # model = Ridge(alpha=1.0)
+    # model = Lasso(alpha=0.1)
+    # model = XGBRegressor(n_estimators=100, learning_rate=0.1)
 
     model.fit(X_train, y_train)
 
