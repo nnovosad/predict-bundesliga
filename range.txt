@@ -1,0 +1,9 @@
+RandomForestRegressor(random_state=41, max_depth=5, min_samples_leaf=1, min_samples_split=5, n_estimators=1500):
+Mean Absolute Error: 0.8892457532317735
+R^2 Score: -0.08329092960430817
+
+
+LinearRegression(copy_X=True, fit_intercept=True, positive=True):
+Mean Absolute Error: 0.879486693568626
+R^2 Score: -0.031100748288803826
+Italy: 1 - 1 : Albania
