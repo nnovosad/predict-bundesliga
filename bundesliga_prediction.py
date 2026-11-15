@@ -26,11 +26,7 @@ def read_and_concat_files(directory):
 
 def load_results_dataframes():
     return [rs.results_d1, rs.results_d2, rs.results_d3, rs.results_d4, rs.results_d5, rs.results_d6, rs.results_d7,
-            rs.results_d8, rs.results_d9, rs.results_d10, rs.results_d11, rs.results_d12, rs.results_d13,
-            rs.results_d14, rs.results_d15, rs.results_d16, rs.results_d17, rs. results_d18, rs.results_d19,
-            rs.results_d20, rs.results_d21, rs.results_d22, rs.results_d23, rs.results_d24, rs.results_d25,
-            rs.results_d26, rs.results_d27, rs.results_d28, rs.results_d29, rs.results_d30, rs.results_d31,
-            rs.results_d32, rs.results_d33, rs.results_d34]
+            rs.results_d8, rs.results_d9]
 
 
 def preprocess_dataframe(df):
@@ -63,7 +59,8 @@ def predict_result(home_team, away_team, label_encoders, model):
 
 
 def main():
-    df = read_and_concat_files('/Users/nnovosad/PycharmProjects/predict-bundesliga/kaggle')
+    kaggle_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kaggle', 'input')
+    df = read_and_concat_files(kaggle_path)
 
     # FTHG: Full Time Home Team Goals
     # HTHG: Half Time Home Team Goals
@@ -84,9 +81,9 @@ def main():
 
     match_days = md.match_days
 
-    df.dropna(inplace=True)
+    df = df.dropna()
     df = df.sample(frac=1)
-    df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
+    df['Date'] = pd.to_datetime(df['Date'], format='mixed', dayfirst=True)
 
     max_date = df['Date'].max()
     df['days_since_last_match'] = (max_date - df['Date']).dt.days

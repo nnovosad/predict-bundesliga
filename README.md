@@ -44,27 +44,62 @@
 | `FTR` | Итоговый результат (H/A/D) |
 | `HTR` | Результат первого тайма (H/A/D) |
 
-## Зависимости
+## Установка
 
-- Python 3.x
-- `pandas`
-- `numpy`
-- `scikit-learn`
-- `tqdm`
+**Требования:** Python 3.8+
 
-Установка:
+### 1. Клонируйте репозиторий
 
 ```bash
-pip install pandas numpy scikit-learn tqdm
+git clone <repository-url>
+cd predict-bundesliga
 ```
 
-## Запуск
+### 2. Создайте виртуальное окружение
+
+```bash
+python3 -m venv venv
+```
+
+### 3. Активируйте окружение
+
+- **Linux / macOS:**
+  ```bash
+  source venv/bin/activate
+  ```
+- **Windows:**
+  ```bash
+  venv\Scripts\activate
+  ```
+
+### 4. Установите зависимости
+
+```bash
+pip install -r requirements.txt
+```
+
+Зависимости проекта (`requirements.txt`):
+
+| Пакет | Описание |
+|-------|----------|
+| `pandas` | Обработка и анализ табличных данных |
+| `numpy` | Численные вычисления |
+| `scikit-learn` | Машинное обучение (Random Forest, LabelEncoder, метрики) |
+| `tqdm` | Индикатор прогресса при загрузке данных |
+
+### 5. Запуск
 
 ```bash
 python bundesliga_prediction.py
 ```
 
 > **Внимание:** путь к папке с данными Kaggle задан жёстко в `bundesliga_prediction.py` (`/Users/nnovosad/PycharmProjects/predict-bundesliga/kaggle`). Перед запуском измените его на актуальный путь.
+
+### 6. Деактивация окружения
+
+```bash
+deactivate
+```
 
 ## Как это работает
 
