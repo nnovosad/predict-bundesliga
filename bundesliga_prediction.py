@@ -117,12 +117,13 @@ def main():
     print("Mean Absolute Error:", mean_absolute_error(y_test, y_pred))
     print("R^2 Score:", r2_score(y_test, y_pred))
 
-    last_match_day = list(match_days.keys())[-1]
-    last_match_day_info = match_days[last_match_day]["matches"]
+    # Get the next matchday (10) - the first one after completed matchdays in results.py
+    next_match_day = 10
+    next_match_day_info = match_days[next_match_day]["matches"]
 
-    print('Match day number: {}'.format(last_match_day))
-    for i in last_match_day_info:
-        match = last_match_day_info[i]
+    print('Match day number: {}'.format(next_match_day))
+    for i in next_match_day_info:
+        match = next_match_day_info[i]
         H = match["H"]
         A = match["A"]
         if H and A:
