@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import r2_score, mean_absolute_error
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
 from tqdm import tqdm
 
 import results as rs
@@ -201,20 +201,20 @@ def add_team_features(df):
 
 
 def train_predict_rf(X_train, y_train, X_test):
-    rf = RandomForestRegressor()
+    rf = RandomForestClassifier(n_estimators=1000, random_state=41, n_jobs=-1)
     rf.fit(X_train, y_train)
     predictions = rf.predict(X_test)
     return predictions
 
 
 def evaluate_model(y_true, y_pred):
-    r2 = r2_score(y_true, y_pred)
-    mae = mean_absolute_error(y_true, y_pred)
-    return r2, mae
+    acc = accuracy_score(y_true, y_pred)
+    report = classification_report(y_true, y_pred, target_names=['Home Win (H)', 'Draw (D)', 'Away Win (A)'])
+    return acc, report
 
 
 def predict_result(home_team, away_team, label_encoders, model, df_full, feature_cols):
-    """Predict result with team features for a specific match."""
+    """Predict match result (H/D/A) with probabilities for a specific match."""
     home_team_encoded = label_encoders['HomeTeam'].transform([home_team])
     away_team_encoded = label_encoders['AwayTeam'].transform([away_team])
     
@@ -300,7 +300,8 @@ def predict_result(home_team, away_team, label_encoders, model, df_full, feature
     
     prediction_input = pd.DataFrame(features)[feature_cols]
     prediction = model.predict(prediction_input)
-    return prediction[0]
+    probabilities = model.predict_proba(prediction_input)
+    return prediction[0], probabilities[0]
 
 
 def main():
@@ -357,33 +358,39 @@ def main():
     feature_cols = ['HomeTeam', 'AwayTeam'] + [col for col in feature_cols if 'w' in col or 'h2h' in col]
     
     X = df[feature_cols]
-    y = df[['FTHG', "FTAG"]]
+    y = df['FTR']
     
     print(f"Number of features: {len(feature_cols)}")
     print(f"Features: {feature_cols}")
+    print(f"Target distribution:\n{y.value_counts()}")
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     sample_weights_train = df.loc[X_train.index, 'sample_weight'].values
 
-    model = RandomForestRegressor(
+    # Train RandomForest
+    print("\nTraining RandomForest...")
+    model = RandomForestClassifier(
         n_estimators=1000, 
         random_state=41,
         max_depth=15,
         min_samples_split=5,
         min_samples_leaf=2,
+        class_weight='balanced',
         n_jobs=-1
     )
-
     model.fit(X_train, y_train, sample_weight=sample_weights_train)
-
     y_pred = model.predict(X_test)
-    print("Mean Absolute Error:", mean_absolute_error(y_test, y_pred))
-    print("R^2 Score:", r2_score(y_test, y_pred))
+    acc, report = evaluate_model(y_test, y_pred)
+    print(f"Accuracy: {acc:.4f}")
+    print(f"Classification Report:\n{report}")
 
     # Get the next matchday (10) - the first one after completed matchdays in results.py
     next_match_day = 10
     next_match_day_info = match_days[next_match_day]["matches"]
+
+    # Class labels order from the model
+    class_labels = model.classes_
 
     print('Match day number: {}'.format(next_match_day))
     for i in next_match_day_info:
@@ -391,8 +398,14 @@ def main():
         H = match["H"]
         A = match["A"]
         if H and A:
-            r = predict_result(H, A, label_encoders, model, df_original, feature_cols)
-            print(f"{i}. {H}: {round(r[0])} - {round(r[1])} : {A}")
+            result, probs = predict_result(H, A, label_encoders, model, df_original, feature_cols)
+            result_label = {'H': f'{H} win', 'D': 'Draw', 'A': f'{A} win'}[result]
+            # Map probabilities to labels
+            prob_dict = dict(zip(class_labels, probs))
+            h_prob = prob_dict.get('H', 0)
+            d_prob = prob_dict.get('D', 0)
+            a_prob = prob_dict.get('A', 0)
+            print(f"{i}. {H} vs {A}: {result_label} (H:{h_prob:.1%} D:{d_prob:.1%} A:{a_prob:.1%})")
 
 
 if __name__ == "__main__":
