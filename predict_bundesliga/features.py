@@ -16,8 +16,8 @@ class MatchResult(Enum):
 
 
 @dataclass
-class MatchFeatures:
-    """Aggregates all computed features for a single match window into one typed object."""
+class WindowFeatures:
+    """Features computed for a single window size (home/away stats, combined stats, strength diff)."""
     home_avg_goals: float = 0.0
     home_avg_conceded: float = 0.0
     home_win_rate: float = 0.0
@@ -36,13 +36,22 @@ class MatchFeatures:
     away_combined_win: float = 0.0
     strength_diff: float = 0.0
     goal_diff_diff: float = 0.0
-    h2h_home_avg: float = 0.0
-    h2h_away_avg: float = 0.0
-    h2h_matches: int = 0
 
     def to_dict(self, prefix: str = '') -> dict:
         """Convert to a flat dictionary with an optional key prefix."""
         return {f"{prefix}{field}": value for field, value in self.__dict__.items()}
+
+
+@dataclass
+class H2HFeatures:
+    """Head-to-head features between two teams."""
+    h2h_home_avg: float = 0.0
+    h2h_away_avg: float = 0.0
+    h2h_matches: int = 0
+
+    def to_dict(self) -> dict:
+        """Convert to a flat dictionary (no prefix — H2H features are global, not per-window)."""
+        return dict(self.__dict__)
 
 
 def get_team_stats(df, team, match_date, as_home=True, window=10):
@@ -121,7 +130,7 @@ def build_window_features(df, home_team, away_team, match_date, window):
     away_combined_conceded = (away_home_stats['avg_conceded'] + away_away_stats['avg_conceded']) / 2
     away_combined_win = (away_home_stats['win_rate'] + away_away_stats['win_rate']) / 2
 
-    return MatchFeatures(
+    return WindowFeatures(
         home_avg_goals=home_home_stats['avg_goals'],
         home_avg_conceded=home_home_stats['avg_conceded'],
         home_win_rate=home_home_stats['win_rate'],
@@ -167,13 +176,13 @@ def build_h2h_features(df, home_team, away_team, match_date):
         elif len(h2h_home_matches) > 0:
             h2h_away_goals = h2h_home_matches['FTHG'].mean()
 
-        return MatchFeatures(
+        return H2HFeatures(
             h2h_home_avg=h2h_home_goals,
             h2h_away_avg=h2h_away_goals,
             h2h_matches=len(h2h),
         )
 
-    return MatchFeatures()
+    return H2HFeatures()
 
 
 def build_features(df, home_team, away_team, match_date):

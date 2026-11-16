@@ -3,7 +3,8 @@
 from .data_loader import read_and_concat_files, load_results_dataframes, preprocess_dataframe
 from .features import (
     MatchResult,
-    MatchFeatures,
+    WindowFeatures,
+    H2HFeatures,
     WINDOWS,
     get_team_stats,
     build_window_features,
@@ -21,7 +22,8 @@ __all__ = [
     'preprocess_dataframe',
     # Features
     'MatchResult',
-    'MatchFeatures',
+    'WindowFeatures',
+    'H2HFeatures',
     'WINDOWS',
     'get_team_stats',
     'build_window_features',
