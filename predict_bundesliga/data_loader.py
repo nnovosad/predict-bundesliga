@@ -1,4 +1,6 @@
 import os
+from typing import cast
+
 import pandas as pd
 from tqdm import tqdm
 
@@ -11,11 +13,12 @@ def read_and_concat_files(directory):
     for dirname, _, filenames in os.walk(directory):
         for filename in filenames:
             try:
-                pd.read_csv(os.path.join(dirname, filename))
+                pd.read_csv(os.path.join(dirname, filename), encoding='latin-1')
                 file_list.append(os.path.join(dirname, filename))
-            except Exception as e:
+            except (pd.errors.EmptyDataError, pd.errors.ParserError, OSError):
                 continue
-    return pd.concat((pd.read_csv(f) for f in tqdm(file_list)), ignore_index=True)
+    dataframes = cast(list[pd.DataFrame], [pd.read_csv(f, encoding='latin-1') for f in tqdm(file_list)])
+    return pd.concat(dataframes, ignore_index=True)
 
 
 def load_results_dataframes():
