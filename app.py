@@ -7,7 +7,7 @@ import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse
 import jinja2
 
 import match_days
@@ -138,6 +138,15 @@ def run_prediction_pipeline():
     }
     prediction_cache = result
     return result
+
+
+@app.get("/favicon.ico")
+async def favicon():
+    """Return favicon.ico."""
+    return FileResponse(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "favicon.ico"),
+        media_type="image/x-icon",
+    )
 
 
 @app.get("/", response_class=HTMLResponse)
