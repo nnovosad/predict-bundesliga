@@ -108,6 +108,18 @@ results_d9 = pd.DataFrame({
     "Date": ['06/11/26', '07/11/26', '07/11/26', '07/11/26', '07/11/26', '07/11/26', '08/11/26', '08/11/26', '08/11/26']
 })
 
+results_d10 = pd.DataFrame({
+    "HomeTeam": ['Bayern Munich', 'Leverkusen', 'Ein Frankfurt', 'Union Berlin', "M'gladbach", 'Elversberg', 'Schalke 04', 'Augsburg', 'Werder Bremen'],
+    "AwayTeam": ['FC Koln', 'Paderborn', 'Hoffenheim', 'RB Leipzig', 'Dortmund', 'Freiburg', 'Stuttgart', 'Mainz', 'Hamburg'],
+    "FTHG": [1, 4, 1, 1, 0, 0, 0, 3, 4],
+    "FTAG": [1, 0, 0, 5, 1, 1, 0, 1, 0],
+    "HTHG": [1, 1, 1, 1, 0, 0, 0, 2, 0],
+    "HTAG": [1, 0, 0, 1, 0, 0, 0, 0, 0],
+    "FTR": ['D', 'H', 'H', 'A', 'A', 'A', 'D', 'H', 'H'],
+    "HTR": ['D', 'H', 'H', 'D', 'D', 'D', 'D', 'H', 'D'],
+    "Date": ['20/11/26', '21/11/26', '21/11/26', '21/11/26', '21/11/26', '21/11/26', '21/11/26', '22/11/26', '22/11/26']
+})
+
 results_empty = pd.DataFrame({
     "HomeTeam": [],
     "AwayTeam": [],

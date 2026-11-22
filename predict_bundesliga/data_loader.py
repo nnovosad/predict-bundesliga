@@ -24,7 +24,7 @@ def read_and_concat_files(directory):
 def load_results_dataframes():
     """Load completed matchday results from the results module."""
     return [results.results_d1, results.results_d2, results.results_d3, results.results_d4, results.results_d5,
-            results.results_d6, results.results_d7, results.results_d8, results.results_d9]
+            results.results_d6, results.results_d7, results.results_d8, results.results_d9, results.results_d10]
 
 
 def preprocess_dataframe(df):
